@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>simple image viewer</title>
+    <style>
+        #ContentPanel {
+            text-align:center
+        }
+        #ContentLeft {
+            float: left;
+            width: 200px;
+            height: 800px;
+            overflow-y: scroll;
+            overflow-x: hidden;
+        }
+        #ContentMiddle {
+            float: left;
+            width: calc(100% - 200px);
+            height: 800px;
+            overflow: hidden;
+        }
+        li {
+            list-style-type: none;
+            position: relative;
+            left:-33px;
+        }
+    </style>
+
+    <script type="text/javascript">window.$ = window.jQuery = require('./node_modules/jquery/dist/jquery.js');</script>
+
+    <script src="vendor/electron_boilerplate/context_menu.js"></script>
+    <script src="vendor/electron_boilerplate/external_links.js"></script>
+
+    <script src="app.js"></script>
+</head>
+<body>
+
+    <p>Drag and drop images here</p>
+   
+    <div class="lightgallery"></div>
+
+</body>
+</html>
